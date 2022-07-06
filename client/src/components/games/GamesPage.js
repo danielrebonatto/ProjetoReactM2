@@ -6,7 +6,7 @@ import GamesList from './GamesList'
 
 class GamesPage extends Component {
 
-  constructor () {
+  constructor() {
     super()
 
     this.state = {
@@ -18,15 +18,15 @@ class GamesPage extends Component {
     this.getGames = this.getGames.bind(this)
   }
 
-  addGame (game) {
+  addGame(game) {
     gameApi.addGame(game).then(() => this.getGames())
   }
 
-  deleteGame (game) {
+  deleteGame(game) {
     gameApi.deleteGame(game).then(() => this.getGames())
   }
 
-  getGames () {
+  getGames() {
     gameApi.getGames().then((games) =>
       this.setState({
         games: games
@@ -34,23 +34,23 @@ class GamesPage extends Component {
     )
   }
 
-  userCanEditGames () {
+  userCanEditGames() {
     if (this.context.auth.role === 'admin') return true
     else return false
   }
 
-  componentDidMount () {
+  componentDidMount() {
     this.getGames()
   }
 
-  render () {
+  render() {
     return (
       <div>
-        <h2>Games</h2>
+        <h2>Jogos</h2>
         <GamesList games={this.state.games}
           onDelete={this.deleteGame}
           userCanEditGames={this.userCanEditGames(this.context.auth.role)} />
-        { this.userCanEditGames(this.context.auth.role) && <AddGameForm addGame={this.addGame} /> }
+        {this.userCanEditGames(this.context.auth.role) && <AddGameForm addGame={this.addGame} />}
       </div>
     )
   }

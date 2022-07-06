@@ -14,8 +14,8 @@
     },
     {
       "id": 3,
-      "username": "admin",
-      "password": "password",
+      "username": "mestre",
+      "password": "dosmagos",
       "role": "admin"
     }
   ],

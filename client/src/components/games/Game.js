@@ -1,14 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Game = ({game, onDelete, userCanEditGames}) => (
+const Game = ({ game, onDelete, userCanEditGames }) => (
   <div>
     <li>
       <div>
         <label>{game.name}</label>
         {
           userCanEditGames &&
-          <button className='delete button' onClick={() => onDelete(game)}>Delete</button>
+          <button className='delete button' onClick={() => onDelete(game)}>Remover</button>
         }
       </div>
     </li>
