@@ -44,9 +44,23 @@
 }
 
 .button {
-  margin: 10px;
+  background-color: #222; 
+}
+.adicionar{
+  margin-left: 20px;
+  margin-top: 0;
 }
 
+.form-line{
+  display: flex;  
+}
+.form-input{
+  width: 65%;
+}
+
+.input-login{
+  margin-bottom: 10px;
+}
 .estrela-mario {
   margin-bottom: 10px;
 }
