@@ -26,12 +26,7 @@ class LoginPage extends React.Component {
         {redirectToReferrer && (
           <Redirect to={from || '/'} />
         )}
-        {from && (
-          <p>
-            Você deve estar logado para acessar
-            <code>{from.pathname}</code>
-          </p>
-        )}
+        
         {this.context.auth.loggedIn ? (
           <p>
             You're already logged in.

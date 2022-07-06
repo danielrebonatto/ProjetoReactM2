@@ -64,6 +64,10 @@
 .estrela-mario {
   margin-bottom: 10px;
 }
+.error{
+  color: rgb(150, 0, 0);
+}
+
 
 .gameUl {
   padding: 0;
