@@ -44,16 +44,16 @@ class LoginForm extends React.Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-            Username:<br />
-          <input onChange={this.onInputChange} placeholder='Enter username' name='username' value={this.state.fields.username} type='text' />
-            Password:<br />
-          <input onChange={this.onInputChange} placeholder='Enter password' name='password' value={this.state.fields.password} type='password' />
+            Usuario:<br />
+          <input onChange={this.onInputChange} placeholder='Usuario' name='username' value={this.state.fields.username} type='text' />
+            Senha:<br />
+          <input onChange={this.onInputChange} placeholder='Senha' name='password' value={this.state.fields.password} type='password' />
           <input type='submit' value='Login' />
         </form>
 
-        { this.state.loginFailed && <h3>Username or password incorrect.</h3> }
+        { this.state.loginFailed && <div><img width='200px' src='https://lojasaraiva.vteximg.com.br/arquivos/ids/228127/1002532925.jpg?v=636965983173130000'></img> <h3>Usuario ou senha incorretos, verifique e tente novamente.</h3></div> }
 
-        <h4>Sample Users</h4>
+        <h4>Usuarios para exemplo</h4>
         <ul>
           <li>User:  fakeuser/fakepassword</li>
           <li>Admin: admin/password</li>
