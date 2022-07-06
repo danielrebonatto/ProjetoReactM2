@@ -1,12 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const SignOutButton = ({logout}, context) => (
-      context.auth.loggedIn ? (
-        <button className='button' onClick={() => {
-          logout().then(() => context.router.transitionTo('/'))
-        }}>Sign out</button>
-    ) : null
+const SignOutButton = ({ logout }, context) => (
+  context.auth.loggedIn ? (
+    <button className='button' onClick={() => {
+      logout().then(() => context.router.transitionTo('/'))
+    }}>Sair</button>
+  ) : null
 )
 
 SignOutButton.contextTypes = {

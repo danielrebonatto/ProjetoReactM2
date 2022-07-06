@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 class LoginForm extends React.Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = {
       loginFailed: false,
@@ -15,22 +15,22 @@ class LoginForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-  onInputChange (event) {
+  onInputChange(event) {
     const fields = this.state.fields
     fields[event.target.name] = event.target.value
     this.setState({ fields })
   }
 
-  handleSubmit (event) {
+  handleSubmit(event) {
     event.preventDefault()
     this.props.login(this.state.fields.username, this.state.fields.password)
-        .catch(err => {
-          console.log(err)
-          this.loginFailed()
-        })
+      .catch(err => {
+        console.log(err)
+        this.loginFailed()
+      })
   }
 
-  loginFailed () {
+  loginFailed() {
     this.setState({
       loginFailed: true,
       fields: {
@@ -40,7 +40,7 @@ class LoginForm extends React.Component {
     })
   }
 
-  render () {
+  render() {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
@@ -55,7 +55,7 @@ class LoginForm extends React.Component {
 
         <h4>Usuarios para exemplo</h4>
         <ul>
-          <li>User:  fakeuser/fakepassword</li>
+          <li>Convidado:  convidado/convidado</li>
           <li>Admin: admin/password</li>
         </ul>
       </div>
