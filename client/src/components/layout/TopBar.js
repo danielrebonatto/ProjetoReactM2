@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 const TopBar = ({logout}, context) => (
   <div>
     <nav>
-      <Link className='brand' to='/'>React Auth demonstration</Link>
+      <Link className='brand' to='/'><img src='https://cdn4.iconfinder.com/data/icons/proglyphs-free/512/Invader_1-512.png' width='50px'></img> Gamer Control</Link>
       <input id='bmenug' type='checkbox' className='show' />
       <label htmlFor='bmenug' className='burger pseudo button'>&#8801;</label>
 
