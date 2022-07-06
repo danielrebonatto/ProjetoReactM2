@@ -13,7 +13,7 @@ const TopBar = ({ logout }, context) => (
       <div className='menu'>
         <Link className='pseudo button' to='/'>Home</Link>
         <Link className='pseudo button' to='/about'>Sobre</Link>
-        <Link className='pseudo button' to='/games'>Games</Link>
+        <Link className='pseudo button' to='/games'>Jogos</Link>
         {
           !context.auth.loggedIn &&
           <Link className='pseudo button' to='/login'>Entrar</Link>
