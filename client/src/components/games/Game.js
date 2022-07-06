@@ -3,8 +3,9 @@ import PropTypes from 'prop-types'
 
 const Game = ({ game, onDelete, userCanEditGames }) => (
   <div>
+    <hr></hr>
     <li>
-      <div>
+      <div className='gameLi'>
         <label>{game.name}</label>
         {
           userCanEditGames &&
