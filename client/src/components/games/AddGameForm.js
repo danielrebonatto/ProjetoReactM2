@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 class AddGameForm extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = {
       fields: {
@@ -12,27 +12,29 @@ class AddGameForm extends Component {
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-  onInputChange (event) {
+  onInputChange(event) {
     const fields = this.state.fields
     fields[event.target.name] = event.target.value
     this.setState({ fields })
   }
 
-  handleSubmit (event) {
+  handleSubmit(event) {
     this.props.addGame({ name: this.state.fields.name })
-    this.setState({ fields: {
-      name: ''
-    }})
+    this.setState({
+      fields: {
+        name: ''
+      }
+    })
     event.preventDefault()
   }
 
-  render () {
+  render() {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          Name:<br />
-          <input onChange={this.onInputChange} placeholder='Enter name' name='name' value={this.state.fields.name} type='text' />
-          <input type='submit' value='Add Game' />
+          Novo jogo:<br />
+          <input onChange={this.onInputChange} placeholder='Nome' name='name' value={this.state.fields.name} type='text' />
+          <input type='submit' value='Adicionar' />
         </form>
       </div>
     )
