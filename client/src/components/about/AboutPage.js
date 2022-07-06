@@ -5,7 +5,7 @@ const AboutPage = () => {
     <div>
       <h2> About </h2>
       <p>
-        Example showing some basic token authentication with restricted routes.
+        Esse site tem como objetivo cadastros de Games e visualização, com controle de autenticação e permissões.
       </p>
     </div>
   )
