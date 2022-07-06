@@ -47,10 +47,10 @@ class GamesPage extends Component {
     return (
       <div>
         <h2>Jogos</h2>
+        {this.userCanEditGames(this.context.auth.role) && <AddGameForm addGame={this.addGame} />}
         <GamesList games={this.state.games}
           onDelete={this.deleteGame}
           userCanEditGames={this.userCanEditGames(this.context.auth.role)} />
-        {this.userCanEditGames(this.context.auth.role) && <AddGameForm addGame={this.addGame} />}
       </div>
     )
   }

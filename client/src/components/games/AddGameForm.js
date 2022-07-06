@@ -30,7 +30,7 @@ class AddGameForm extends Component {
 
   render() {
     return (
-      <div>
+      <div className='addGameForm'>
         <form onSubmit={this.handleSubmit}>
           Novo jogo:<br />
           <input onChange={this.onInputChange} placeholder='Nome' name='name' value={this.state.fields.name} type='text' />

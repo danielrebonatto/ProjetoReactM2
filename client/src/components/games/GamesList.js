@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Game from './Game'
 
-const GameList = ({games, onDelete, userCanEditGames}) => (
-  <ul>
+const GameList = ({ games, onDelete, userCanEditGames }) => (
+  <ul className='gameUl'>
     {games.map((game) => (
       <Game key={game.id} game={game} onDelete={onDelete} userCanEditGames={userCanEditGames} />
     ))}

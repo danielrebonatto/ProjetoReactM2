@@ -19,8 +19,13 @@
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* This is used to pad the top of the page so the navbar doesn't hide content */
@@ -33,9 +38,33 @@
   box-sizing: border-box;
 }
 
+.mainbody * {
+  text-align: center;
+  list-style: none;
+}
+
 .button {
   margin: 10px;
 }
-.estrela-mario{
+
+.estrela-mario {
   margin-bottom: 10px;
+}
+
+.gameUl {
+  padding: 0;
+}
+
+.gameLi {
+  display: flex;
+  justify-content: space-between;
+}
+
+.gameLi button {
+  margin: 0;
+}
+
+.gameLi label {
+  height: 31px;
+  line-height: 31px;
 }
