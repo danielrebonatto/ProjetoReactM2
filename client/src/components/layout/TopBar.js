@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import SignOutButton from './SignOutButton'
 import { Link } from 'react-router-dom'
 
-const TopBar = ({logout}, context) => (
+const TopBar = ({ logout }, context) => (
   <div>
     <nav>
       <Link className='brand' to='/'><img src='https://cdn4.iconfinder.com/data/icons/proglyphs-free/512/Invader_1-512.png' width='50px'></img> Game Teca</Link>
@@ -12,11 +12,11 @@ const TopBar = ({logout}, context) => (
 
       <div className='menu'>
         <Link className='pseudo button' to='/'>Home</Link>
-        <Link className='pseudo button' to='/about'>About</Link>
+        <Link className='pseudo button' to='/about'>Sobre</Link>
         <Link className='pseudo button' to='/games'>Games</Link>
         {
           !context.auth.loggedIn &&
-          <Link className='pseudo button' to='/login'>Login</Link>
+          <Link className='pseudo button' to='/login'>Entrar</Link>
         }
         <SignOutButton logout={logout} />
       </div>

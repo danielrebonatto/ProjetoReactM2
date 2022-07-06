@@ -4,7 +4,7 @@ import { Redirect } from 'react-router'
 import LoginForm from './LoginForm'
 
 class LoginPage extends React.Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = {
       redirectToReferrer: false
@@ -12,12 +12,12 @@ class LoginPage extends React.Component {
     this.loginToApi = this.loginToApi.bind(this)
   }
 
-  loginToApi (username, password) {
+  loginToApi(username, password) {
     return this.props.login(username, password)
-               .then(() => this.setState({ redirectToReferrer: true }))
+      .then(() => this.setState({ redirectToReferrer: true }))
   }
 
-  render () {
+  render() {
     const { from } = this.props.location.state || '/'
     const { redirectToReferrer } = this.state
 
@@ -28,7 +28,7 @@ class LoginPage extends React.Component {
         )}
         {from && (
           <p>
-            You gotta log in if you want to see
+            Você deve estar logado para acessar
             <code>{from.pathname}</code>
           </p>
         )}

@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 class LoginForm extends React.Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = {
       loginFailed: false,
@@ -15,22 +15,22 @@ class LoginForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-  onInputChange (event) {
+  onInputChange(event) {
     const fields = this.state.fields
     fields[event.target.name] = event.target.value
     this.setState({ fields })
   }
 
-  handleSubmit (event) {
+  handleSubmit(event) {
     event.preventDefault()
     this.props.login(this.state.fields.username, this.state.fields.password)
-        .catch(err => {
-          console.log(err)
-          this.loginFailed()
-        })
+      .catch(err => {
+        console.log(err)
+        this.loginFailed()
+      })
   }
 
-  loginFailed () {
+  loginFailed() {
     this.setState({
       loginFailed: true,
       fields: {
@@ -40,22 +40,22 @@ class LoginForm extends React.Component {
     })
   }
 
-  render () {
+  render() {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-            Username:<br />
-          <input onChange={this.onInputChange} placeholder='Enter username' name='username' value={this.state.fields.username} type='text' />
-            Password:<br />
-          <input onChange={this.onInputChange} placeholder='Enter password' name='password' value={this.state.fields.password} type='password' />
-          <input type='submit' value='Login' />
+          Usuário:<br />
+          <input onChange={this.onInputChange} placeholder='Seu usuário' name='username' value={this.state.fields.username} type='text' />
+          Senha:<br />
+          <input onChange={this.onInputChange} placeholder='Sua senha' name='password' value={this.state.fields.password} type='password' />
+          <input type='submit' value='Entrar' />
         </form>
 
-        { this.state.loginFailed && <h3>Username or password incorrect.</h3> }
+        {this.state.loginFailed && <h3>Usuário ou Senha incorretos.</h3>}
 
-        <h4>Sample Users</h4>
+        <h4>Usuário para teste</h4>
         <ul>
-          <li>User:  fakeuser/fakepassword</li>
+          <li>Convidado:  convidado/convidado</li>
           <li>Admin: admin/password</li>
         </ul>
       </div>

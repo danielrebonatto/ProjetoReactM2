@@ -2,8 +2,8 @@
   "users": [
     {
       "id": 1,
-      "username": "fakeuser",
-      "password": "fakepassword",
+      "username": "convidado",
+      "password": "convidado",
       "role": "user"
     },
     {
