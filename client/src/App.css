@@ -30,7 +30,7 @@
 
 /* This is used to pad the top of the page so the navbar doesn't hide content */
 .mainbody {
-  padding-top: 60px;
+  padding-top: 35px;
   width: 600px;
   margin: 20px auto;
   -webkit-box-sizing: border-box;
