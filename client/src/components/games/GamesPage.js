@@ -47,7 +47,7 @@ class GamesPage extends Component {
     return (
       <div>
         <h2>Jogos</h2>
-        <img width='80px' src='https://images.genial.ly/59e059d30b9c21060cb4c2ec/5bbf17763292ef649e9b810f/de9cc4f5-63f1-40e3-8540-cc3620632e04.gif?genial&1657116185439'></img>
+        <img alt="" width='80px' src='https://images.genial.ly/59e059d30b9c21060cb4c2ec/5bbf17763292ef649e9b810f/de9cc4f5-63f1-40e3-8540-cc3620632e04.gif?genial&1657116185439'></img>
         {this.userCanEditGames(this.context.auth.role) && <AddGameForm addGame={this.addGame} />}
         <GamesList games={this.state.games}
           onDelete={this.deleteGame}

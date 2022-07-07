@@ -43,7 +43,7 @@ class LoginForm extends React.Component {
   render() {
     return (
       <div>
-        {this.state.loginFailed && <div><img width='150px' src='https://lojasaraiva.vteximg.com.br/arquivos/ids/228127/1002532925.jpg?v=636965983173130000'></img> <h3 className='error'>Usuario ou senha incorretos, verifique e tente novamente.</h3></div>}
+        {this.state.loginFailed && <div><img alt="" width='150px' src='https://lojasaraiva.vteximg.com.br/arquivos/ids/228127/1002532925.jpg?v=636965983173130000'></img> <h3 className='error'>Usuario ou senha incorretos, verifique e tente novamente.</h3></div>}
         <form onSubmit={this.handleSubmit}>
           Usuario:<br />
           <input className='input-login' onChange={this.onInputChange} placeholder='Usuario' name='username' value={this.state.fields.username} type='text' />
