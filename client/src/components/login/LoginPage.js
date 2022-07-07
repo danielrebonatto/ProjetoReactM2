@@ -29,7 +29,7 @@ class LoginPage extends React.Component {
         
         {this.context.auth.loggedIn ? (
           <p>
-            You're already logged in.
+            Você já está logado.
           </p>
         ) : (
           <LoginForm login={this.loginToApi} />
